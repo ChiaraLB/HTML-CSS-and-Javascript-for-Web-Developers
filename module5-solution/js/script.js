@@ -116,6 +116,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
     
       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+
     var  homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
 
 
@@ -131,6 +132,7 @@ function buildAndShowHomeHTML (categories) {
 
 // Given array of category objects, returns a random category object.
 function chooseRandomCategory (categories) {
+
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
@@ -171,7 +173,6 @@ function buildAndShowCategoriesHTML (categories) {
         function (categoryHtml) {
           // Switch CSS class active to menu button
           switchMenuToActive();
-
           var categoriesViewHtml =
             buildCategoriesViewHtml(categories,
                                     categoriesTitleHtml,
@@ -211,7 +212,6 @@ function buildCategoriesViewHtml(categories,
   finalHtml += "</section>";
   return finalHtml;
 }
-
 
 
 // Builds HTML for the single category page based on the data
